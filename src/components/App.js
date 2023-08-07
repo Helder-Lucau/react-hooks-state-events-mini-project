@@ -17,18 +17,11 @@ function App() {
     setTasks(taskItem)
   }
   
-  const deleteTask = (index) => {
-    const newTaskArray = tasks.filter((task) => task.index !== index);
-    setTasks(newTaskArray)
+  const deleteTask = (task) => {
+    setTasks(tasks.filter(taskItem => {
+      return taskItem.text !== task
+    }))
   }
-
-  // const taskToDisplay = tasks.filter((task) => {
-  //   if (categories === "All") {
-  //     return true;
-  //   } else {
-  //     return task.category === categories;
-  //   }
-  // });
 
   return (
     <div className="App">

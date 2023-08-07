@@ -5,6 +5,7 @@ function CategoryFilter({categories}) {
     <div className="categories">
       <h5>Category filters</h5>
       {/* render <button> elements for each category here */}
+      <button className="selected"></button>
     </div>
   );
 }
